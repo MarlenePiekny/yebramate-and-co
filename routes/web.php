@@ -5,7 +5,7 @@
 //Tableau qui repertorie l'ensemble des pages accessibles depuis le Front controller
 $map = [
     '404' => 'resources/views/errors/404.php',
-    'home' => 'resources/views/home.php',
+    'home' => 'app/controllers/homeController.php',
     'product' => 'app/controllers/showController.php'
     ];
 

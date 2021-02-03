@@ -6,3 +6,9 @@ function getProduct(PDO $pdo, int $idProduct) :array {
     $productFeature = $result->fetch(PDO::FETCH_ASSOC);
     return $productFeature;
 }
+
+function getAllProducts(PDO $pdo) : array {
+    $result = $pdo->query("SELECT id,title FROM products");
+    $products = $result->fetchAll(PDO::FETCH_OBJ);
+    return $products;
+}
