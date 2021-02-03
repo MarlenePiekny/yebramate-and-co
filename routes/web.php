@@ -1,4 +1,5 @@
 <?php
+require_once 'resources/views/layouts/header.php';
 // le front-controller avec les routes
 
 //Tableau qui repertorie l'ensemble des pages accessibles depuis le Front controller
@@ -25,3 +26,4 @@ if (filter_has_var(INPUT_GET, 'action')){
 
 //On affiche la page demandée
 require $map[$page];
+require_once  'resources/views/layouts/footer.php';
