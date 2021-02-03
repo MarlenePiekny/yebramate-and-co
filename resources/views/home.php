@@ -6,6 +6,7 @@
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?= $product->title ?></h5>
+                    <p><?=formatPrice(priceWithVat($product->price, $product->vat))?></p>
                     <a href="/index.php?action=product&id=<?= $product->id?>" class="btn btn-primary">Voir le produit</a>
                 </div>
             </div>

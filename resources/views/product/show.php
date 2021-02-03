@@ -7,7 +7,7 @@
             <img src="storage/app/product/mate.jpg">
         </div>
         <p><?= $product['description'] ?></p>
-        <p><?= $product['price'] * (1+$product['vat']) ?></p>
+        <p><?= priceWithVat($product['price'], $product['vat']) ?></p>
         <form action="/index.php?action=cart" method="post">
             <div class="mb-3">
                 <label for="number" class="form-label">quantité</label>

@@ -1,6 +1,6 @@
 <?php
 function getProduct(PDO $pdo, int $idProduct) :array {
-    $result = $pdo->query("SELECT title, description, price, vat
+    $result = $pdo->query("SELECT *
                             FROM products
                             WHERE id = $idProduct");
     $productFeature = $result->fetch(PDO::FETCH_ASSOC);
@@ -12,7 +12,7 @@ function getProduct(PDO $pdo, int $idProduct) :array {
 }
 
 function getAllProducts(PDO $pdo) : array {
-    $result = $pdo->query("SELECT id,title FROM products");
+    $result = $pdo->query("SELECT * FROM products");
     $products = $result->fetchAll(PDO::FETCH_OBJ);
     return $products;
 }
