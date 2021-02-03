@@ -1,11 +1,12 @@
 <?php
-require_once 'resources/views/layouts/header.php';
+
 // le front-controller avec les routes
 
 //Tableau qui repertorie l'ensemble des pages accessibles depuis le Front controller
 $map = [
     '404' => 'resources/views/errors/404.php',
-    'home' => 'resources/views/home.php'
+    'home' => 'resources/views/home.php',
+    'product' => 'app/controllers/showController.php'
     ];
 
 if (filter_has_var(INPUT_GET, 'action')){
@@ -26,4 +27,3 @@ if (filter_has_var(INPUT_GET, 'action')){
 
 //On affiche la page demandée
 require $map[$page];
-require_once  'resources/views/layouts/footer.php';
