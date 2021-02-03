@@ -4,7 +4,11 @@ function getProduct(PDO $pdo, int $idProduct) :array {
                             FROM products
                             WHERE id = $idProduct");
     $productFeature = $result->fetch(PDO::FETCH_ASSOC);
-    return $productFeature;
+    if ($productFeature) {
+        return $productFeature;
+    } else {
+        return [];
+    }
 }
 
 function getAllProducts(PDO $pdo) : array {
