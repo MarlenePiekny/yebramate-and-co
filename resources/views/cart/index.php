@@ -8,8 +8,8 @@
             <img src="...">
             <h4><?= $tabProduct['title'] ?></h4>
             <p><?= formatPrice($priceWithVat); ?></p>
-            <p><?= $tabProduct['quantity'] ?></p>
-            <p><?= formatPrice($priceWithVat*$tabProduct['quantity']) ?></p>
+            <p><?= $product['quantity'] ?></p>
+            <p><?= formatPrice($priceWithVat*$product['quantity']) ?></p>
         </div>
     <hr>
     <?php endforeach; ?>

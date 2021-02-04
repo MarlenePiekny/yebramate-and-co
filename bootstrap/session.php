@@ -1,7 +1,3 @@
-
-
-
-
 <?php
 session_start();
 
