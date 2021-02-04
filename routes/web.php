@@ -6,7 +6,8 @@
 $map = [
     '404' => 'resources/views/errors/404.php',
     'home' => 'app/controllers/homeController.php',
-    'product' => 'app/controllers/showController.php'
+    'product' => 'app/controllers/showController.php',
+    'cart' => 'app/controllers/cartController.php'
     ];
 
 if (filter_has_var(INPUT_GET, 'action')){
