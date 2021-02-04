@@ -14,12 +14,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="resources/views/home.php">Acceuil
+                    <a class="nav-link" href="app/controllers/homeController.php">Accueil
 
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">A propos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="app/controllers/showController.php">Produit</a>
@@ -29,6 +29,13 @@
                 </li>
             </ul>
         </div>
+        <p>
+            <button class="btn btn-primary" type="button" href="views/cart/index.php">
+                <?php $priceAndQuantity = totalCart($bdd); ?>
+                Payer <?= formatPrice($priceAndQuantity[0])?>
+                Quantité <?= $priceAndQuantity[1] ?>
+            </button>
+        </p>
     </div>
 </nav>
 
