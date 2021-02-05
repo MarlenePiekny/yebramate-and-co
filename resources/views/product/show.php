@@ -1,3 +1,4 @@
+
 <main>
     <div>
         <h1><?= $product['title'] ?></h1>
@@ -13,7 +14,8 @@
                 <label for="number" class="form-label">quantité</label>
                 <input type="number" name="number">
             </div>
-            <button type="submit" class="btn btn-primary">Ajouter au panier</button>
+            <input type="hidden" name="id" value="<?= $product['id'] ?> ">
+            <button type="submit" class="btn btn-primary" name="idProduct" >Ajouter au panier</button>
         </form>
     </article>
 </main>
