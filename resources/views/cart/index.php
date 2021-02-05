@@ -11,6 +11,7 @@
                 <p><?= formatPrice($priceWithVat); ?></p>
                 <p><input type="number" name="<?= $id ?>" value="<?= $quantity ?>"</p>
                 <p><?= formatPrice($priceWithVat * $quantity) ?></p>
+                <button type="submit" name="<?= 'delete'.$id ?>">Supprimer</button>
             </div>
             <hr>
         <?php endforeach; ?>

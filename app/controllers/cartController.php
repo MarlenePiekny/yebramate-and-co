@@ -7,7 +7,7 @@ if (isset($_POST['updateCart'])) { // bouton MAJ cliqué
     addProductCart($idSanitized, $quantitySanitized);
 }
 require_once 'resources/views/layouts/header.php';
-//var_dump($_POST);
+var_dump($_POST);
 //var_dump($_SESSION['cart']);
 require 'resources/views/cart/index.php';
 
