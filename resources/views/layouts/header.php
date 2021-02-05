@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="app/controllers/homeController.php">Accueil
+                    <a class="nav-link" href="/index.php?action=home">Accueil
 
                     </a>
                 </li>
@@ -22,7 +22,7 @@
                     <a class="nav-link" href="#">A propos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="app/controllers/showController.php">Produit</a>
+                    <a class="nav-link" href="">Produit</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="adminer-4.7.8.php">Adminer</a>

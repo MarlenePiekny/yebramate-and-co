@@ -17,6 +17,8 @@ function fakeCart()
     $_SESSION['cart'][1] = $product2;
     $_SESSION['cart'][2] = $product3;
 }
+
+// Fonction qui ajoute le produit d'indentifiant $postId au panier en quantité $postNumber
 function addProductCart (int $postId, int $postNumber)
 {
     if (isset($_SESSION['cart'][$postId])) {
@@ -28,7 +30,7 @@ function addProductCart (int $postId, int $postNumber)
     }
 }
 
-//Fonction totalCart qui prend le pdo et retourne le prix total du panier
+// Fonction qui prend le pdo et retourne le prix total et la quantité de produits du panier
 function totalCart(PDO $pdo): array
 {
     $total = 0;
@@ -43,3 +45,19 @@ function totalCart(PDO $pdo): array
     return [$total,$nbProduct];
 }
 
+// fonction qui supprime du panier le produit d'identifiant $idProduct
+function deleteProductCart(int $idProduct) {
+    unset($_SESSION['cart'][$idProduct]);
+}
+
+// fonction de MAJ du panier :
+// parcourt le panier et pour chaque id de celui-ci récupère la quantité correspondant au même id dans $_POST
+function updateProductCart() {
+    foreach($_SESSION['cart'] as $id => $quantity) {
+        if ($_POST[$id] == 0) {
+            deleteProductCart($id);
+        } else {
+            $_SESSION['cart'][$id] = $_POST[$id];
+        }
+    }
+}
