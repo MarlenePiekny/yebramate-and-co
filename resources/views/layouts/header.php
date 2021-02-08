@@ -30,10 +30,10 @@
             </ul>
         </div>
         <p>
-            <button class="btn btn-primary" type="button" href="views/cart/index.php">
-                <?php $priceAndQuantity = totalCart($bdd); ?>
+            <button class="btn bg-primary " type="button" href="views/cart/index.php">
+                <a class="text-light" href="index.php?action=cart" ><?php $priceAndQuantity = totalCart($bdd); ?>
                 Payer <?= formatPrice($priceAndQuantity[0])?>
-                Quantité <?= $priceAndQuantity[1] ?>
+                Quantité <?= $priceAndQuantity[1] ?></a>
             </button>
         </p>
     </div>

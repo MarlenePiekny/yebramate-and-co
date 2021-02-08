@@ -54,10 +54,10 @@ function deleteProductCart(int $idProduct) {
 // parcourt le panier et pour chaque id de celui-ci récupère la quantité correspondant au même id dans $_POST
 function updateProductCart() {
     foreach($_SESSION['cart'] as $id => $quantity) {
-        if ($_POST[$id] == 0) {
+        if ($_POST['qte_'.$id] == 0) {
             deleteProductCart($id);
         } else {
-            $_SESSION['cart'][$id] = $_POST[$id];
+            $_SESSION['cart'][$id] = $_POST['qte_'.$id];
         }
     }
 }

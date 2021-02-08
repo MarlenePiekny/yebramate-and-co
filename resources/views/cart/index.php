@@ -9,9 +9,9 @@
                 <img src="...">
                 <h4><?= $tabProduct['title'] ?></h4>
                 <p><?= formatPrice($priceWithVat); ?></p>
-                <p><input type="number" name="<?= $id ?>" value="<?= $quantity ?>"</p>
+                <p><input type="number" name="qte_<?= $id ?>" value="<?= $quantity ?>"</p>
                 <p><?= formatPrice($priceWithVat * $quantity) ?></p>
-                <button type="submit" name="<?= 'delete'.$id ?>">Supprimer</button>
+                <a class="btn btn-primary" href="/index.php?action=cart&delete=<?= $id ?>">Supprimer</a>
             </div>
             <hr>
         <?php endforeach; ?>
